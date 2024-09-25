@@ -1,0 +1,124 @@
+/* تنسيقات عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* لون خلفية فاتح وهادئ */
+    color: #333; /* لون نص أساسي */
+}
+
+header {
+    background-color: #34495e; /* لون خلفية غامق ومريح للعين */
+    color: #ecf0f1; /* لون نص فاتح لتناسق مع الخلفية */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 صور في السطر */
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ecf0f1; /* خلفية خفيفة حول الصور */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق النافذة المنبثقة */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* لون خلفية داكن مع شفافية */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #ecf0f1; /* حدود فاتحة حول الصورة */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #ecf0f1; /* لون نص الإغلاق */
+    cursor: pointer;
+}
+
+/* أزرار التنقل */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #ecf0f1; /* لون النص */
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    color: #f1c40f; /* تغيير اللون عند التمرير */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e; /* نفس لون الهيدر */
+    color: #ecf0f1;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
